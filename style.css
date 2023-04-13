@@ -1,0 +1,37 @@
+header {
+  display: flex;
+  flex-direction: row;
+  margin: 35px;
+}
+header div {
+  margin: 15px auto;
+}
+
+.imgHeader {
+  text-align: center;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+.imgHeader img {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  margin: 15px auto;
+}
+
+.myCard {
+  width: 200px;
+  height: 350px;
+  margin: 50px;
+}
+.myCard img {
+  height: 30%;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

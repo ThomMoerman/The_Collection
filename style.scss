@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300;500&display=swap');
+
+*{
+    font-family: 'Chivo Mono', monospace;
+}
+
+body{
+    background-color: #E7E7E7;
+}
 header{
     display: flex;
     flex-direction: row;
@@ -19,17 +28,45 @@ header{
     }
 }
 
-.myCard{
-    width: 200px;
-    height: 350px;
-    margin: 50px;
-    img{
-        height: 30%;
-    }
-}
-
-.mainContent{
+main{
     display: flex;
     flex-direction: row;
-    min-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+article{
+    height: 450px;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgb(32, 32, 32);
+    overflow: hidden;
+    cursor: pointer;
+    background-image: url(../The_Collection/assets/fond-gris.avif);
+
+    &:hover .imgSection{
+        filter: grayscale(100%);
+      }
+    .imgSection{
+      height: 200px;
+      width: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .txtSection{
+        padding: 15px;
+        h2{
+          font-size: 20px;
+          margin: 10px 0 20px 0;
+          text-align: center;
+        }
+        li{
+            margin: 10px 0 20px 0;
+            font-size: 15px;
+        }
+    }
 }

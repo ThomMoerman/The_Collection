@@ -70,3 +70,18 @@ article{
         }
     }
 }
+
+.tagsGenre{
+        list-style: none;
+        display: flex;
+        justify-content:flex-start;
+        margin: 0;
+        li{
+          margin-right: 10px;
+          color: black;
+          border-radius: 6px;
+          font-size: 12px;
+          letter-spacing: 0.6px;
+          padding: 3px 10px;
+        }
+}

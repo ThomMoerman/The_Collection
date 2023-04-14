@@ -58,7 +58,7 @@ const gameCollection = [
     developedBy : "Avalanche Software",
     releaseYear: 2023,
     picture: "../The_Collection/assets/HogwartsLegacy.jpg",
-    genre: ["Aventure", "Action-RPG-OpenWorld"],
+    genre: ["Aventure", "Action-RPG"],
     mode: ["Solo"],
   },
 

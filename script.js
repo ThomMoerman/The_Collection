@@ -1,6 +1,8 @@
 for (elem of gameCollection) {
+    createCard(elem);
+}
 
-    // Création de la card et des ses sections
+function createCard(Object) {
     let article = document.createElement("article");
     article.className = "myCard";
 
@@ -12,23 +14,30 @@ for (elem of gameCollection) {
 
     let footerCard = document.createElement("footer");
 
-    const main = document.querySelector("main");
-    main.append(article);
-    article.append(imgSection);
-    article.append(txtSection);
-    article.append(footerCard);
+    imgSection.style.backgroundImage = "url(" + Object.picture + ")";
+    imgSection.style.backgroundImage = Object.cover;
 
-    // Création et ajout de l'image du jeu
-    imgSection.style.backgroundImage = "url(" + elem.picture + ")";
-    imgSection.style.backgroundImage = elem.cover;
+    let nameCard = document.createElement("h2");
+    nameCard.textContent = Object.name;
+    txtSection.appendChild(nameCard);
 
-    // Gestion des tags pour les types de jeu 
+    let developedBy = document.createElement("li");
+    developedBy.textContent = ("Developed by : " + Object.developedBy);
+    txtSection.appendChild(developedBy);
+
+    let releaseYear = document.createElement("li");
+    releaseYear.textContent = ("Release in : " + Object.releaseYear);
+    txtSection.appendChild(releaseYear);
+
+    let gameMode = document.createElement("li");
+    gameMode.textContent = ("Mode : " + Object.mode);
+    txtSection.appendChild(gameMode);
 
     let tags = document.createElement('ul');
     tags.className = "tagsGenre"
     footerCard.append(tags);
 
-    elem.genre.forEach(tag => {
+    Object.genre.forEach(tag => {
         let tagli = document.createElement('li');
         tags.append(tagli);
         let tagText = document.createTextNode(tag);
@@ -72,28 +81,18 @@ for (elem of gameCollection) {
         }
     });
 
-    let nameCard = document.createElement("h2");
-    nameCard.textContent = elem.name;
-    txtSection.appendChild(nameCard);
-
-    let developedBy = document.createElement("li");
-    developedBy.textContent = ("Developed by : " + elem.developedBy);
-    txtSection.appendChild(developedBy);
-
-    let releaseYear = document.createElement("li");
-    releaseYear.textContent = ("Release in : " + elem.releaseYear);
-    txtSection.appendChild(releaseYear);
-
-    let gameMode = document.createElement("li");
-    gameMode.textContent = ("Mode : " + elem.mode);
-    txtSection.appendChild(gameMode);
-
-    // Gestion du bouton de supression 
     let delbtn = document.createElement("button");
     delbtn.className = "delbtn"
     delbtn.textContent = ("Delete")
-    delbtn.addEventListener("click", function() {
+    delbtn.addEventListener("click", function () {
         article.parentNode.removeChild(article);
     });
     txtSection.appendChild(delbtn);
+    
+    const main = document.querySelector("main");
+    main.append(article);
+    article.append(imgSection);
+    article.append(txtSection);
+    article.append(footerCard);
 }
+

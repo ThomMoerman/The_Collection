@@ -85,4 +85,12 @@ article .txtSection li {
   padding: 3px 10px;
 }
 
+.delbtn {
+  margin: 0;
+  float: right;
+  color: white;
+  background-color: red;
+  border-radius: 6px;
+}
+
 /*# sourceMappingURL=style.css.map */

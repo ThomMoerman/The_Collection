@@ -87,4 +87,13 @@ for (elem of gameCollection) {
     let gameMode = document.createElement("li");
     gameMode.textContent = ("Mode : " + elem.mode);
     txtSection.appendChild(gameMode);
+
+    // Gestion du bouton de supression 
+    let delbtn = document.createElement("button");
+    delbtn.className = "delbtn"
+    delbtn.textContent = ("Delete")
+    delbtn.addEventListener("click", function() {
+        article.parentNode.removeChild(article);
+    });
+    txtSection.appendChild(delbtn);
 }
